@@ -1,0 +1,43 @@
+exp_name: palmgan_256
+seed: 1337
+device: auto           # cuda:0 / cpu
+precision: fp16        # or fp32
+
+data:
+  train_roots:
+    - data/synth/train
+  val_roots:
+    - data/synth/val
+  input_key: deg
+  target_key: clean
+  img_size: 256
+  batch_size: 8
+  num_workers: 4
+
+model:
+  gen:
+    channels: [64,128,256,512,1024]
+    attn_at:  [encoder3, bottleneck, decoder1]  # positions to use attention_block
+    heads_per_stage: [1,2,4]                    # used where attn applies
+  disc:
+    base_channels: 64
+    use_lsgan: true
+
+optim:
+  lr_g: 2.0e-4
+  lr_d: 2.0e-4
+  betas: [0.5, 0.999]
+  epochs: 100
+
+loss:
+  adv_weight: 1.0
+  recon:
+    type: "bce"          # or "l1"
+    weight: 100.0
+  ssim_weight: 50.0
+  edge_weight: 10.0
+
+log:
+  out_dir: runs/palmgan_256
+  sample_every: 1000
+  save_every: 1
