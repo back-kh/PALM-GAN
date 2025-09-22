@@ -5,7 +5,9 @@ This repository accompanies the paper:
 **"Generate, transform, and clean: the role of GANs and transformers in palm leaf manuscript generation and enhancement"**
 
 ---
-
+Progress:
+1- Paper Accepted
+2- Release Code (Update)
 
 ## 🎯 Research Goals
 
