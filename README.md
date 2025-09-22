@@ -40,9 +40,13 @@ This paper investigates how recent advances in deep learning—specifically Gene
 If you use this code, data, or ideas from our work, please cite:
 
 ```bibtex
-@inproceedings{YourPaper2025,
+@article{thuon2024generate,
   title={Generate, transform, and clean: the role of GANs and transformers in palm leaf manuscript generation and enhancement},
-  author={Your Name and Co-authors},
-  booktitle={Proceedings of ...},
-  year={2025}
+  author={Thuon, Nimol and Du, Jun and Zhang, Zhenrong and Ma, Jiefeng and Hu, Pengfei},
+  journal={International Journal on Document Analysis and Recognition (IJDAR)},
+  volume={27},
+  number={3},
+  pages={415--432},
+  year={2024},
+  publisher={Springer}
 }
