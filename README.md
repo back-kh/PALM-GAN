@@ -1,4 +1,4 @@
-# 📜 Generate, Transform, and Clean: The Role of GANs and Transformers in Palm Leaf Manuscript Generation and Enhancement
+# 📜 Generate, Transform, and Clean: The Role of GANs and Transformers in Palm Leaf Manuscript Generation and Enhancement [Updated]
 
 This repository accompanies the paper:
 
