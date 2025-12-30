@@ -18,7 +18,7 @@ This paper investigates how recent advances in deep learning—specifically Gene
 3. **Clean** noise, stains, and artifacts to facilitate automated analysis and digital archiving.  
 
 ---
-----
+---
 ## 🔑 Key Contributions
 
 - **GAN-based Generation:**  
