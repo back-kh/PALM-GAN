@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palmgan"
+version = "0.2.0"
+description = "Memory-safe CNN-Transformer PALM-GAN for manuscript enhancement"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["palmgan"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

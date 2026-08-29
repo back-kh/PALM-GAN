@@ -1,0 +1,25 @@
+seed: 1337
+image_size: 256
+batch_size: 2
+epochs: 100
+early_stopping_patience: 15
+
+model:
+  base_channels: 64
+  discriminator_base_channels: 64
+  spectral_normalization: true
+
+optimizer:
+  generator_learning_rate: 2.0e-4
+  discriminator_learning_rate: 2.0e-4
+  betas: [0.5, 0.999]
+  gradient_clip_norm: 5.0
+  # Warm up reconstruction before enabling adversarial updates.
+  adversarial_start_step: 500
+
+loss:
+  adversarial: 1.0
+  reconstruction: 100.0
+  dice: 0.0
+  structural_similarity: 50.0
+  edge: 10.0

@@ -35,7 +35,37 @@ This paper investigates how recent advances in deep learning—specifically Gene
 
 ---
 
+## Memory-safe PyTorch implementation
 
+The `palmgan` package provides the paper-aligned residual CNN encoder/decoder,
+Transformer context blocks, and conditional PatchGAN discriminator. Local
+window attention is used at high-resolution stages to avoid the quadratic
+memory cost of full 256 x 256 attention. The training helper implements LSGAN,
+binary reconstruction, Dice, SSIM, and edge-consistency objectives.
+
+```bash
+python -m pip install -e ".[test]"
+pytest -q
+```
+
+```python
+import torch
+
+from palmgan import PalmGANGenerator, PalmGANTrainer
+
+model = PalmGANGenerator()
+degraded = torch.rand(1, 1, 256, 256)
+clean_probability = torch.sigmoid(model(degraded))
+
+trainer = PalmGANTrainer(generator=model, adversarial_start_step=500)
+metrics = trainer.train_step(degraded, torch.rand_like(degraded))
+```
+
+`configs/train_palmgan_v2.yaml` documents the recommended starting recipe.
+Use image-level train/validation splits and tune the final binarization
+threshold on validation data only.
+
+---
 
 ## 📖 Citation
 
@@ -52,3 +82,4 @@ If you use this code, data, or ideas from our work, please cite:
   year={2024},
   publisher={Springer}
 }
+```
