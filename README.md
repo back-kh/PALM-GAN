@@ -19,11 +19,6 @@ encoder–decoder with Transformer context blocks and a conditional PatchGAN
 discriminator. It follows the released PALM-GAN design while replacing
 expensive high-resolution global attention with bounded local-window attention.
 
-> [!IMPORTANT]
-> This repository currently provides model and training code, not a fully
-> reproduced benchmark release. PyTorch pretrained weights, prepared datasets,
-> and independently verified result tables are not included. Report new results
-> only after completing document-level validation and held-out testing.
 
 ## Highlights
 
