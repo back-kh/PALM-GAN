@@ -1,13 +1,3 @@
-"""Memory-safe CNN--Transformer PALM-GAN models.
-
-The encoder, decoder, skip connections, and attention locations follow the
-architecture released with the PALM-GAN paper. High-resolution attention is
-partitioned into local windows so its memory use remains bounded.
-
-Paper: https://doi.org/10.1007/s10032-024-00472-z
-Reference implementation: https://github.com/back-kh/PALM-GAN
-"""
-
 from __future__ import annotations
 
 import torch
