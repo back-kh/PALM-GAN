@@ -6,8 +6,6 @@ enhancement and document binarization.**
 [Paper](https://doi.org/10.1007/s10032-024-00472-z) ·
 [Project page](https://ruisju111.github.io/enhancement/) ·
 [Configuration](configs/train_palmgan_v2.yaml) ·
-[Tests](tests/test_palmgan.py)
-
 PALM-GAN is the cleaning component of the **Generate–Transform–Clean (GTC)**
 framework introduced in *Generate, transform, and clean: the role of GANs and
 transformers in palm leaf manuscript generation and enhancement*. The framework
