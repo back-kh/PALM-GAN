@@ -143,23 +143,6 @@ The values in
 [`configs/train_palmgan_v2.yaml`](configs/train_palmgan_v2.yaml) are a starting
 recipe, not guaranteed optimal hyperparameters.
 
-### Recommended pretraining and fine-tuning protocol
-
-For transfer to a small target collection such as KSI:
-
-1. Pretrain on DIBCO or another larger paired document-binarization dataset.
-2. Split documents—not patches—into training and validation partitions.
-3. Fine-tune with a lower learning rate, initially preserving reconstruction
-   and structural losses.
-4. Select the epoch and threshold using validation documents only.
-5. Retrain on the permitted full training set if required by the evaluation
-   protocol.
-6. Evaluate the untouched test set once and report all runs, seeds, and
-   selection rules.
-
-Patch augmentation may include crops, mild rotations, illumination changes,
-blur, noise, and synthetic stains. Apply geometry identically to the degraded
-image and its target, and avoid transformations that destroy fine strokes.
 
 ## Evaluation and reproducibility
 
